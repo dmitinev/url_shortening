@@ -17,6 +17,7 @@
 cmake-build-*/
 .idea/**/mongoSettings.xml
 .idea/
+.vscode/
 .cache/
 *.iws
 out/
