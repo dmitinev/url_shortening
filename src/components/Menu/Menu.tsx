@@ -4,11 +4,11 @@ import './Menu.scss';
 
 interface MenuProps {
   links: MenuItems;
-  handleSignup: () => void;
-  handleLogin: () => void;
+  handleSignup?: () => void;
+  handleLogin?: () => void;
 }
 
-export const Menu = memo(({ links, handleSignup, handleLogin }: MenuProps) => {
+export const Menu = memo(({ links }: MenuProps) => {
   return (
     <nav className="menu">
       <ul className="menu__list">

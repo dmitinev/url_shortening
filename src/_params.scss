@@ -31,13 +31,13 @@ $VeryDarkViolet: hsl(260, 8%, 14%);
 }
 
 @mixin pc_display {
-  @media (width > 1024px) {
+  @media (width >= 1024px) {
     @content;
   }
 }
 
 @mixin tablet_display {
-  @media (width > 767px) {
+  @media (width >= 767px) {
     @content;
   }
 }

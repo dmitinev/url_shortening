@@ -26,11 +26,7 @@ export const Header = () => {
       {mobile ? (
         <IoMenu className="header__burger" />
       ) : (
-        <Menu
-          links={memoMenuItems}
-          handleLogin={() => {}}
-          handleSignup={() => {}}
-        />
+        <Menu links={memoMenuItems} />
       )}
     </header>
   );
