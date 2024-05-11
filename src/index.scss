@@ -1,0 +1,11 @@
+@import 'the-new-css-reset';
+
+.container {
+  max-width: 21.6875rem;
+  padding: 0 0.625rem;
+  margin: 0 auto;
+  @include tablet_display {
+    max-width: 70.625rem;
+  }
+}
+

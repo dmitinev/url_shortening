@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,12 +16,13 @@ export default defineConfig({
       'top-level-await': true,
     },
   },
-  // css: {
-  //   preprocessorOptions: {
-  //     scss: {
-  //       additionalData: '@import "./src/_mixins.scss";',
-  //     },
-  //   },
-  // },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import "./src/_params.scss";',
+      },
+    },
+  },
   base: '/url_shortening/',
-})
+});
+

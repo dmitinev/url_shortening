@@ -1,0 +1,44 @@
+$Cyan: hsl(180, 66%, 49%);
+$DarkViolet: hsl(257, 27%, 26%);
+$Red: hsl(0, 87%, 67%);
+$Gray: hsl(0, 0%, 75%);
+$GrayishViolet: hsl(257, 7%, 63%);
+$VeryDarBlue: hsl(255, 11%, 22%);
+$VeryDarkViolet: hsl(260, 8%, 14%);
+
+@mixin poppins-regular {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin poppins-medium {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin poppins-bold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin hover {
+  @media (any-hover: hover) {
+    @content;
+  }
+}
+
+@mixin pc_display {
+  @media (width > 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet_display {
+  @media (width > 767px) {
+    @content;
+  }
+}
+
