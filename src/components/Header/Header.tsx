@@ -21,7 +21,7 @@ export const Header = () => {
   const memoMenuItems = useMemo(() => menuItems, []);
 
   return (
-    <header className="header container">
+    <header className="header container" id="pageHeader">
       <img src={Logo} alt="logo" className="header__image" />
       {mobile ? (
         <IoMenu className="header__burger" />

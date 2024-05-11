@@ -1,2 +1,17 @@
+#pageHeader {
+  padding: 2.5rem 0;
+}
 .header {
+  display: flex;
+  position: relative;
+  align-items: center;
+  &__burger {
+    font-size: 1.75rem;
+    color: $GrayishViolet;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  &__image {
+    margin-right: 2rem;
+  }
 }
