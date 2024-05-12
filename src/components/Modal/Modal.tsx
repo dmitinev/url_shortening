@@ -62,7 +62,7 @@ export const Modal = ({ title, children, open, onClose }: ModalProps) => {
               <Button
                 size="small"
                 onClick={onClose}
-                style={{ backgroundColor: 'red' }}
+                style={{ backgroundColor: '#f46262' }}
               >
                 Close
               </Button>

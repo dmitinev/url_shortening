@@ -9,6 +9,7 @@ interface ButtonProps {
   type?: 'button' | 'submit';
   children: string;
   style?: CSSProperties;
+  disabled?: boolean;
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -20,6 +21,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       type = 'button',
       children,
       style,
+      disabled,
     }: ButtonProps,
     ref,
   ) => {
@@ -33,6 +35,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     return (
       <button
+        disabled={disabled}
         ref={ref}
         onClick={onClick}
         className={mainClasses}

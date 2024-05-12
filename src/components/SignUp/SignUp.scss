@@ -10,4 +10,7 @@
       color: $GrayishViolet;
     }
   }
+  input.error {
+    border-color: $Red;
+  }
 }
