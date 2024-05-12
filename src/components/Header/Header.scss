@@ -13,5 +13,14 @@
   }
   &__image {
     margin-right: 2rem;
+    cursor: pointer;
+  }
+  &__mobileMenu {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
   }
 }

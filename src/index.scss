@@ -1,5 +1,9 @@
 @import 'the-new-css-reset';
 
+body {
+  @include poppins-regular;
+}
+
 .container {
   max-width: 21.6875rem;
   padding: 0 0.625rem;
