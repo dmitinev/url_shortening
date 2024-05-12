@@ -1,0 +1,13 @@
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  input {
+    margin-bottom: 1.5rem;
+    border-radius: 0.75rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid $GrayishViolet;
+    &::placeholder {
+      color: $GrayishViolet;
+    }
+  }
+}

@@ -1,6 +1,8 @@
 import { memo } from 'react';
+import useMatchMedia from 'use-match-media-hook';
+import { queries } from '../../Config';
+import { MenuItems } from '../../types/types';
 import { Button } from '../Button';
-import { MenuItems } from '../Header';
 import './Menu.scss';
 
 interface MenuProps {
@@ -9,7 +11,8 @@ interface MenuProps {
   handleLogin?: () => void;
 }
 
-export const Menu = memo(({ links }: MenuProps) => {
+export const Menu = memo(({ links, handleLogin, handleSignup }: MenuProps) => {
+  const [mobile] = useMatchMedia(queries);
   return (
     <div className="h_menu">
       <nav className="menu">
@@ -24,9 +27,17 @@ export const Menu = memo(({ links }: MenuProps) => {
         </ul>
       </nav>
       <div className="menu_buttons">
-        <Button>Log out</Button>
-        <Button variant="link">Login</Button>
-        <Button>Sign up</Button>
+        {/* <Button>Log out</Button> */}
+        <Button
+          variant="link"
+          style={mobile ? { color: '#fff' } : undefined}
+          onClick={handleLogin}
+        >
+          Login
+        </Button>
+        <Button size={mobile ? 'large' : 'small'} onClick={handleSignup}>
+          Sign up
+        </Button>
       </div>
     </div>
   );

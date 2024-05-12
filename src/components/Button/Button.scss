@@ -1,2 +1,37 @@
 .button {
+  color: #ffffff;
+  background-color: $Cyan;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  &:hover {
+    opacity: 0.8;
+  }
+  &__small {
+    padding: 0.5625rem 1.4375rem 0.5rem 1.5rem;
+  }
+
+  border-radius: 1.25rem;
+  &__square {
+    border-radius: 0.625rem;
+    padding: 1.125rem 2.5625rem;
+  }
+  &__link {
+    background-color: transparent;
+    border-radius: unset;
+    color: $GrayishViolet;
+    transition: color 0.3s ease;
+    &:hover {
+      color: $DarkViolet;
+    }
+  }
+  &__medium {
+    padding: 0.875rem 2.5rem;
+  }
+  &__large {
+    padding: 0.75rem 6.625rem;
+  }
 }

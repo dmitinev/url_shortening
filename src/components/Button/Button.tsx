@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { forwardRef } from 'react';
+import { CSSProperties, forwardRef } from 'react';
 import './Button.scss';
 
 interface ButtonProps {
@@ -8,6 +8,7 @@ interface ButtonProps {
   size?: 'small' | 'medium' | 'large';
   type?: 'button' | 'submit';
   children: string;
+  style?: CSSProperties;
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -18,19 +19,26 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       size = 'medium',
       type = 'button',
       children,
+      style,
     }: ButtonProps,
     ref,
   ) => {
     const mainClasses = cn('button', {
-      'button--square': variant === 'square',
-      'button--link': variant === 'link',
-      'button--small': size === 'small',
-      'button--medium': size === 'medium',
-      'button--large': size === 'large',
+      button__square: variant === 'square',
+      button__link: variant === 'link',
+      button__small: size === 'small',
+      button__medium: size === 'medium',
+      button__large: size === 'large',
     });
 
     return (
-      <button ref={ref} onClick={onClick} className={mainClasses} type={type}>
+      <button
+        ref={ref}
+        onClick={onClick}
+        className={mainClasses}
+        type={type}
+        style={style}
+      >
         {children}
       </button>
     );
