@@ -3,6 +3,7 @@
 body {
   @include poppins-regular;
   height: 100dvh;
+  overflow-x: hidden;
 }
 
 .container {

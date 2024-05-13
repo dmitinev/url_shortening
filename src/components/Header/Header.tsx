@@ -49,7 +49,7 @@ export const Header = () => {
         <AnimatePresence>
           {isMobileMenuOpened && mobile && (
             <motion.div
-              className="header__mobileMenu"
+              className="header__mobileMenu container"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
