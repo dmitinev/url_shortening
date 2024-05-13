@@ -6,11 +6,10 @@ body {
 }
 
 .container {
-  max-width: 21.6875rem;
-  padding: 0 0.625rem;
+  width: 100%;
+  max-width: 1150px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0 auto;
-  @include tablet_display {
-    max-width: 70.625rem;
-  }
 }
 

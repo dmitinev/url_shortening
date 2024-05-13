@@ -32,7 +32,7 @@ export const Header = () => {
 
   return (
     <>
-      <header className="header container" id="pageHeader">
+      <header className="header container">
         <img src={Logo} alt="logo" className="header__image" />
         {mobile ? (
           <IoMenu

@@ -72,7 +72,12 @@ export const SignUp = ({ handleClick, title }: SignUpProps) => {
         className={touched.password ? 'error' : ''}
         value={pass}
       />
-      {}
+      {Object.values(touched).some((value) => value === true) &&
+        Object.values(error).some((value) => value === true) && (
+          <span className="signUpFieldError">
+            *All fields must be valid and filled
+          </span>
+        )}
       <Button
         size="large"
         onClick={handleClick}
