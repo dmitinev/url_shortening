@@ -4,21 +4,58 @@
 }
 
 .shortUrlForm {
-  padding: 24px;
+  padding: 1.5rem;
+  border-radius: 0.625rem;
   position: relative;
-  border-radius: 10px;
   background-color: #3a3054;
   background-image: url('../../assets/bg-shorten-mobile.svg');
   background-repeat: no-repeat;
-  background-position: 34px;
+  background-position: 2.125rem;
   background-size: cover;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   @include tablet_display {
     flex-direction: row;
+    padding: 3.25rem 4rem;
+    background-position: center;
+    background-image: url('../../assets/bg-shorten-desktop.svg');
+
   }
   @include pc_display {
     background-image: url('../../assets/bg-shorten-desktop.svg');
+  }
+  &__inputField {
+    padding: 0.375rem 6.375rem 0.375rem 1rem;
+    border-radius: 0.3125rem;
+    background-color: #fff;
+    min-height: 3rem;
+    @include tablet_display {
+      flex: 1 1 auto;
+    }
+    &::placeholder {
+      color: $Gray;
+    }
+
+  }
+  &__inputField.form_error {
+    border: solid 0.1875rem $Red;
+    &::placeholder {
+      color: $Red;
+      opacity: 0.5;
+    }
+  }
+  &__inputFieldError {
+    color: $Red;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.5;
+    letter-spacing: 0.005rem;
+    font-size: 0.75rem;
+    @include tablet_display {
+      position: absolute;
+      left: 4rem;
+      bottom: 1.25rem
+    }
   }
 }
