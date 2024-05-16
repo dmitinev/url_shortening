@@ -1,0 +1,20 @@
+.footer {
+  background-color: $VeryDarkViolet;
+  text-align: center;
+  color: #fff;
+  @include pc_display {
+    text-align: left;
+  }
+  padding-top: 3.375rem;
+  &__container {
+
+  }
+  &__logo{
+    cursor: pointer;
+    & svg {
+      & path {
+        fill: #fff;
+      }
+    }
+  }
+}
