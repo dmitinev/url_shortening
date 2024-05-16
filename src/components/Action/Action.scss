@@ -1,0 +1,35 @@
+.action {
+  background-image: url('../../assets/bg-boost-mobile.svg');
+  background-color: #3a3054;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include pc_display {
+    background-image: url('../../assets/bg-boost-desktop.svg');
+  }
+  &__heading {
+    color: #fff;
+    font-weight: 600;
+    font-size: 28px;
+    @include pc_display {
+      font-size: 2.5rem;
+    }
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: -0.7px;
+    text-align: center;
+  }
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 18.75rem;
+    gap: 1rem;
+    @include pc_display {
+      min-height: 15.625rem;
+    }
+  }
+}

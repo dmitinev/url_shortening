@@ -1,3 +1,4 @@
+import { Action } from 'components/Action';
 import { Features } from 'components/Features';
 import { Form } from 'components/Form';
 import { Header } from 'components/Header';
@@ -10,6 +11,7 @@ function App() {
       <MainInfo />
       <Form />
       <Features />
+      <Action />
     </>
   );
 }

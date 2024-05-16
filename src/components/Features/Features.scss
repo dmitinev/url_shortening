@@ -1,6 +1,10 @@
 .features {
   background-color: #eff1f7;
   padding-top: 5rem;
+  padding-bottom: 5rem;
+  @include pc_display {
+    padding-bottom: 6.375rem;
+  }
   text-align: center;
   &__container {
     display: flex;
