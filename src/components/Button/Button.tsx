@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import { motion } from 'framer-motion';
 import { CSSProperties, forwardRef } from 'react';
 import './Button.scss';
 
@@ -47,3 +48,5 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     );
   },
 );
+
+export const Mbutton = motion(Button);
