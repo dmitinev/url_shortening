@@ -1,8 +1,10 @@
+import { FC, SVGProps } from 'react';
+
 type FooterLink = {
   text: string;
   url: string;
 };
-type FooterLinks = FooterLink[];
+export type FooterLinks = FooterLink[];
 
 type FooterItem = {
   id: number;
@@ -12,7 +14,7 @@ type FooterItem = {
 
 type FooterSocialItem = {
   id: number;
-  imageUrl: string;
+  imageUrl: FC<SVGProps<SVGSVGElement>>;
   url: string;
   alt: string;
 };

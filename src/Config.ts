@@ -1,10 +1,10 @@
 import BrandRecognition from './assets/icon-brand-recognition.svg';
 import DetailedRecord from './assets/icon-detailed-records.svg';
-import Facebook from './assets/icon-facebook.svg';
+import { ReactComponent as Facebook } from './assets/icon-facebook.svg';
 import FullyCustomizable from './assets/icon-fully-customizable.svg';
-import Instagram from './assets/icon-instagram.svg';
-import Pinterest from './assets/icon-pinterest.svg';
-import Twitter from './assets/icon-twitter.svg';
+import { ReactComponent as Instagram } from './assets/icon-instagram.svg';
+import { ReactComponent as Pinterest } from './assets/icon-pinterest.svg';
+import { ReactComponent as Twitter } from './assets/icon-twitter.svg';
 import {
   FooterItems,
   FooterSocials,

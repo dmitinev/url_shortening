@@ -6,15 +6,86 @@
     text-align: left;
   }
   padding-top: 3.375rem;
+  padding-bottom: 3.625rem;
   &__container {
-
+    display: flex;
+    flex-direction: column;
+    @include pc_display {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
   }
-  &__logo{
+  &__logo {
     cursor: pointer;
-    & svg {
+    margin-bottom: 3.5625rem;
+    @include pc_display {
+      margin-bottom: 0;
+    }
+    & path {
+      fill: #fff;
+      transition: fill 0.3s;
+    }
+    &:hover {
       & path {
-        fill: #fff;
+        fill: $Gray;
       }
     }
+  }
+  &__linksBlock {
+    @include pc_display {
+      display: flex;
+      justify-content: center;
+      gap: 4.875rem;
+    }
+  }
+}
+
+.linkBlock {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    &:not(:last-child) {
+      margin-bottom: 2.5rem;
+      @include pc_display {
+        margin-bottom: 0;
+      }
+    }
+    & h4 {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: -0.25px;
+      margin-bottom: 12px;
+    }
+    & a {
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: -0.23px;
+      color: $Gray;
+      transition: color 0.3s;
+      text-decoration: none;
+      &:hover {
+        color: $GrayishViolet;
+      }
+    }
+  }
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3.125rem;
+  gap: 1.5rem;
+  @include pc_display {
+    margin-top: 0;
+  }
+  & a path {
+    fill: #fff;
+    transition: fill 0.3s;
+  }
+  & a:hover path {
+    fill: $GrayishViolet;
   }
 }
