@@ -19,7 +19,7 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
-  urlReducer,
+  links: urlReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

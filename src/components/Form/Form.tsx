@@ -1,5 +1,7 @@
 import cn from 'classnames';
 import { useFormik } from 'formik';
+import { useAppDispatch } from 'src/store/store-hooks';
+import { shortUrl } from 'src/store/urlSlice/urlAction';
 import { ShortUrlFormValues } from 'src/types/types';
 import * as yup from 'yup';
 import { Button } from '../Button';
@@ -12,13 +14,14 @@ const validationSchema: yup.ObjectSchema<ShortUrlFormValues> = yup
   });
 
 export const Form = () => {
+  const dispatch = useAppDispatch();
   const formik = useFormik<ShortUrlFormValues>({
     initialValues: {
       url: '',
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      dispatch(shortUrl(values.url));
     },
   });
 
