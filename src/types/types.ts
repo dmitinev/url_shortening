@@ -36,3 +36,8 @@ export type FooterItems = FooterItem[];
 export type FooterSocials = FooterSocialItem[];
 
 export type PageFeatures = PageFeature[];
+
+export type Url = {
+  originalUrl: string;
+  shortUrl: string;
+};
