@@ -41,3 +41,7 @@ export type Url = {
   originalUrl: string;
   shortUrl: string;
 };
+
+export interface IApiResponse {
+  result_url: string;
+}

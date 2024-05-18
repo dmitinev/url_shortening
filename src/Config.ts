@@ -12,7 +12,7 @@ import {
   PageFeatures,
 } from './types/types';
 
-export const API_URL = 'https://ulvis.net/API/write/post';
+export const API_URL = 'https://url-shortener-service.p.rapidapi.com/shorten';
 
 export const queries: string[] = ['(max-width: 766px)', '(min-width: 767px)'];
 
