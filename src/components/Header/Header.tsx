@@ -64,10 +64,10 @@ export const Header = () => {
         </AnimatePresence>
       </header>
       <Modal open={isSignInOpen} onClose={handleIsSgnInOpened} title="Sign In">
-        <SignUp handleClick={() => {}} title="Sign In" />
+        <SignUp modalClose={handleIsSgnInOpened} title="Sign In" />
       </Modal>
       <Modal open={isSignUpOpen} onClose={handleIsSignUpOpened} title="Sign Up">
-        <SignUp handleClick={() => {}} title="Sign Up" />
+        <SignUp modalClose={handleIsSignUpOpened} title="Sign Up" />
       </Modal>
     </>
   );

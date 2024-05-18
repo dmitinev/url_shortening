@@ -1,10 +1,12 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, memo, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { login } from 'src/store/loginSlice/loginSlice';
 import { Button } from '../Button';
 import './SignUp.scss';
 
 interface SignUpProps {
-  handleClick: () => void;
   title: string;
+  modalClose?: () => void;
 }
 
 const isEmailValid = (email: string) => {
@@ -12,7 +14,8 @@ const isEmailValid = (email: string) => {
   return re.test(email) && email.length > 0;
 };
 
-export const SignUp = ({ handleClick, title }: SignUpProps) => {
+export const SignUp = memo(({ title, modalClose }: SignUpProps) => {
+  const dispatch = useDispatch();
   const [email, setEmail] = useState<string>('');
   const [pass, setPass] = useState<string>('');
   const [touched, setTouched] = useState<{ email: boolean; password: boolean }>(
@@ -54,6 +57,14 @@ export const SignUp = ({ handleClick, title }: SignUpProps) => {
     }
   };
 
+  const handleClick = () => {
+    if (Object.values(error).some((value) => value)) return;
+    if (email.length > 0 && pass.length > 0) {
+      dispatch(login({ email: email, password: pass }));
+      modalClose && modalClose();
+    }
+  };
+
   return (
     <div className="signUpForm">
       <input
@@ -92,4 +103,4 @@ export const SignUp = ({ handleClick, title }: SignUpProps) => {
       </Button>
     </div>
   );
-};
+});

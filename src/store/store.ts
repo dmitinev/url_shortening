@@ -11,6 +11,7 @@ import {
   persistStore,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import loginReducer from './loginSlice/loginSlice';
 import urlReducer from './urlSlice/UrlSlice';
 
 const persistConfig = {
@@ -20,6 +21,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   links: urlReducer,
+  users: loginReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
