@@ -101,7 +101,7 @@
     }
   }
   &:not(:last-child)::after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     bottom: -5rem;
@@ -127,7 +127,7 @@
       &::after {
         left: unset;
         right: -1.25rem;
-        bottom: calc(46%);
+        bottom: 46%;
         transform: rotate(90deg);
         height: 2rem;
       }

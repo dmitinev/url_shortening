@@ -14,7 +14,7 @@ export const ShortenedLinks = () => {
 
   const copyClipboardHandler = (url: string) => {
     navigator.clipboard.writeText(url).then(() => {
-      setCopiedLinks([...copiedlinks, url]);
+      setCopiedLinks([url]);
     });
   };
 

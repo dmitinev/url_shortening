@@ -49,4 +49,4 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   },
 );
 
-export const Mbutton = motion(Button);
+export const MButton = motion(Button);
