@@ -4,6 +4,7 @@ import { Footer } from 'components/Footer';
 import { Form } from 'components/Form';
 import { Header } from 'components/Header';
 import { MainInfo } from 'components/MainInfo';
+import { ShortenedLinks } from './components/ShortenedLinks';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <MainInfo />
       <Form />
+      <ShortenedLinks />
       <Features />
       <Action />
       <Footer />
