@@ -1,11 +1,15 @@
-import { useState } from 'react';
-import { useAppSelector } from 'src/store/store-hooks';
+import { useEffect, useState } from 'react';
+import { loginSelector } from 'src/store/loginSlice/loginSelectors';
+import { useAppDispatch, useAppSelector } from 'src/store/store-hooks';
+import { removeLinks } from 'src/store/urlSlice/UrlSlice';
 import { urlsSelector } from 'src/store/urlSlice/urlSelector';
 import { Button } from '../Button';
 import './ShortenedLinks.scss';
 
 export const ShortenedLinks = () => {
   const { urls } = useAppSelector(urlsSelector);
+  const { isAuth } = useAppSelector(loginSelector);
+  const dispatch = useAppDispatch();
   const [copiedlinks, setCopiedLinks] = useState<string[]>([]);
 
   const copyClipboardHandler = (url: string) => {
@@ -13,6 +17,12 @@ export const ShortenedLinks = () => {
       setCopiedLinks([...copiedlinks, url]);
     });
   };
+
+  useEffect(() => {
+    if (!isAuth) {
+      dispatch(removeLinks(true));
+    }
+  }, [isAuth]);
 
   return (
     <section className="shortenedLinks">

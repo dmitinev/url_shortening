@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { Url } from 'src/types/types';
 import { shortUrl } from './urlAction';
 
@@ -16,11 +16,16 @@ const initialState: IUrlState = {
   urls: [],
   error: null,
 };
-
 const UrlSlice = createSlice({
   name: '@@url',
   initialState,
-  reducers: {},
+  reducers: {
+    removeLinks: (state, action: PayloadAction<boolean>) => {
+      if (action.payload) {
+        state.urls = [];
+      }
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(shortUrl.pending, (state) => {
@@ -43,5 +48,6 @@ const UrlSlice = createSlice({
   },
 });
 
+export const { removeLinks } = UrlSlice.actions;
 export default UrlSlice.reducer;
 

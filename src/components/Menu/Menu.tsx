@@ -2,6 +2,7 @@ import { memo } from 'react';
 import { logout } from 'src/store/loginSlice/loginSlice';
 import { useLogin } from 'src/store/loginSlice/useLogin';
 import { useAppDispatch } from 'src/store/store-hooks';
+import { removeLinks } from 'src/store/urlSlice/UrlSlice';
 import useMatchMedia from 'use-match-media-hook';
 import { queries } from '../../Config';
 import { MenuItems } from '../../types/types';
@@ -21,6 +22,7 @@ export const Menu = memo(({ links, handleLogin, handleSignup }: MenuProps) => {
 
   const handleLogout = () => {
     dispatch(logout());
+    dispatch(removeLinks(true));
   };
 
   return (
