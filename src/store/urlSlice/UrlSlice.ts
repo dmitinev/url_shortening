@@ -28,7 +28,13 @@ const UrlSlice = createSlice({
       })
       .addCase(shortUrl.fulfilled, (state, action) => {
         state.loadingStatus = 'succeeded';
-        state.urls.push(action.payload);
+        if (
+          !state.urls.some((url) => url.shortUrl === action.payload.shortUrl)
+        ) {
+          state.urls.push(action.payload);
+        } else {
+          return;
+        }
       })
       .addCase(shortUrl.rejected, (state, action) => {
         state.loadingStatus = 'failed';

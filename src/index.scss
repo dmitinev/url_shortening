@@ -3,6 +3,9 @@
 body {
   @include poppins-regular;
   height: 100dvh;
+}
+
+#root {
   overflow-x: hidden;
 }
 

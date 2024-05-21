@@ -20,8 +20,9 @@ export const Form = () => {
       url: '',
     },
     validationSchema: validationSchema,
-    onSubmit: (values) => {
+    onSubmit: (values, { resetForm }) => {
       dispatch(shortUrl(values.url));
+      resetForm();
     },
   });
 

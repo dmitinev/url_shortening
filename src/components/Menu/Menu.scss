@@ -40,7 +40,10 @@
     font-size: 18px;
     margin-bottom: 1.5rem;
     @include tablet_display {
-      margin-right: 1.8125rem;
+      &:not(:last-child) {
+        margin-right: 1.8125rem;
+      }
+
       margin-bottom: 0;
     }
   }
